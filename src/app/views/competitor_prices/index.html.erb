@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Competitor Prices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Imageurl</th>
+      <th>Price</th>
+      <th>Source</th>
+      <th>Title</th>
+      <th>Update at</th>
+      <th>Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @competitor_prices.each do |competitor_price| %>
+      <tr>
+        <td><%= competitor_price.imageurl %></td>
+        <td><%= competitor_price.price %></td>
+        <td><%= competitor_price.source %></td>
+        <td><%= competitor_price.title %></td>
+        <td><%= competitor_price.update_at %></td>
+        <td><%= competitor_price.url %></td>
+        <td><%= link_to 'Show', competitor_price %></td>
+        <td><%= link_to 'Edit', edit_competitor_price_path(competitor_price) %></td>
+        <td><%= link_to 'Destroy', competitor_price, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Competitor Price', new_competitor_price_path %>

@@ -1,0 +1,47 @@
+<%= form_with(model: competitor_price, local: true) do |form| %>
+  <% if competitor_price.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(competitor_price.errors.count, "error") %> prohibited this competitor_price from being saved:</h2>
+
+      <ul>
+      <% competitor_price.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :imageurl %>
+    <%= form.text_field :imageurl %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :source %>
+    <%= form.text_field :source %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_area :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :update_at %>
+    <%= form.text_field :update_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class CompetitorPrice < ApplicationRecord
+end

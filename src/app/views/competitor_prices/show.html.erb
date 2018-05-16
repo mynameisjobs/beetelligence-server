@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Imageurl:</strong>
+  <%= @competitor_price.imageurl %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @competitor_price.price %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @competitor_price.source %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @competitor_price.title %>
+</p>
+
+<p>
+  <strong>Update at:</strong>
+  <%= @competitor_price.update_at %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @competitor_price.url %>
+</p>
+
+<%= link_to 'Edit', edit_competitor_price_path(@competitor_price) %> |
+<%= link_to 'Back', competitor_prices_path %>
