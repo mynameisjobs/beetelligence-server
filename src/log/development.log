@@ -698,3 +698,479 @@ Processing by CompetitorPricesController#index as HTML
 Completed 200 OK in 132ms (Views: 110.3ms | ActiveRecord: 1.4ms)
 
 
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-16 18:25:45 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eINIovmLivckT/v9ph87yEZ2RkPjXSAz2gnUn4jhPkqXi5zrKlNTcBD4IOjDMKGTVjkXNXiuODvNbFZZAktyPw==", "competitor_price"=>{"imageurl"=>"http://sssss", "price"=>"20", "source"=>"facebook", "title"=>"雞胸肉", "update_at"=>"2017-08-08", "url"=>"http://sssss"}, "commit"=>"Create Competitor price"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- elasticsearch/model):
+  
+app/models/competitor_price.rb:1:in `<main>'
+app/controllers/competitor_prices_controller.rb:29:in `create'
+  [1m[36mCompetitorPrice Load (1.8ms)[0m  [1m[34mSELECT  "competitor_prices".* FROM "competitor_prices" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-16 18:38:21 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- elasticsearch):
+  
+app/controllers/competitor_prices_controller.rb:1:in `<main>'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-16 18:50:01 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- elasticsearch):
+  
+app/controllers/competitor_prices_controller.rb:1:in `<main>'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-16 18:51:47 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- elasticsearch):
+  
+app/controllers/competitor_prices_controller.rb:1:in `<main>'
+Started GET "/" for 172.21.0.1 at 2018-05-16 19:02:43 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (4.0ms)
+Completed 200 OK in 28ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:09:58 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+LoadError (cannot load such file -- elasticsearch):
+  
+app/controllers/competitor_prices_controller.rb:1:in `<main>'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:11:56 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:12:06 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- elasticsearch):
+  
+app/controllers/competitor_prices_controller.rb:1:in `<main>'
+  
+LoadError (cannot load such file -- elasticsearch):
+  
+app/controllers/competitor_prices_controller.rb:1:in `<main>'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:17:06 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+LoadError (cannot load such file -- elasticsearch):
+  
+app/controllers/competitor_prices_controller.rb:1:in `<main>'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:17:44 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- elasticsearch/model):
+  
+app/models/competitor_price.rb:1:in `<main>'
+app/controllers/competitor_prices_controller.rb:9:in `index'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:18:17 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (6.8ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (92.0ms)
+Completed 200 OK in 602ms (Views: 509.0ms | ActiveRecord: 66.6ms)
+
+
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:21:22 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- faraday):
+  
+app/controllers/competitor_prices_controller.rb:2:in `<main>'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:21:24 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- faraday):
+  
+app/controllers/competitor_prices_controller.rb:2:in `<main>'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:23:43 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- faraday):
+  
+app/controllers/competitor_prices_controller.rb:2:in `<main>'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:23:45 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- faraday):
+  
+app/controllers/competitor_prices_controller.rb:2:in `<main>'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:23:48 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- faraday):
+  
+app/controllers/competitor_prices_controller.rb:2:in `<main>'
+Started GET "/" for 172.21.0.1 at 2018-05-16 19:24:51 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.5ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:24:59 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- faraday):
+  
+app/controllers/competitor_prices_controller.rb:2:in `<main>'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:25:37 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (6.7ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 549ms (Views: 496.9ms | ActiveRecord: 20.2ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-16 19:25:43 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (33.7ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 142ms (Views: 130.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:25:53 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sO1YgymRbOg3QzvK/rINl9PxWq9M6TlwczgM3niZhuD83f20dOyp2ym+xQ7uQ9zzOlD3YYslurU4KlZ2zWnfmQ==", "competitor_price"=>{"imageurl"=>"http", "price"=>"20", "source"=>"qwew", "title"=>"qweqwe", "update_at"=>"qweqweqw", "url"=>"qweqwqw"}, "commit"=>"Create Competitor price"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 5, expected 4)):
+  
+app/controllers/competitor_prices_controller.rb:91:in `perform_request'
+app/controllers/competitor_prices_controller.rb:33:in `create'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:29:56 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (2.1ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 164ms (Views: 116.0ms | ActiveRecord: 34.0ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-16 19:30:09 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (3.1ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 128ms (Views: 116.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:30:16 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"09V4HVcPE3t6T7AOmWH+xL86+yGFyeD1ui1WkqDB7dif5d0qCnLWSGSyTsqJkC+gVptW70IFYzDxPww6FTG0oQ==", "competitor_price"=>{"imageurl"=>"vdfv", "price"=>"1", "source"=>"cwdc", "title"=>"wcd", "update_at"=>"cdw", "url"=>"cd"}, "commit"=>"Create Competitor price"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/competitor_prices_controller.rb:37
+  [1m[36mCompetitorPrice Create (4.3ms)[0m  [1m[32mINSERT INTO "competitor_prices" ("imageurl", "price", "source", "title", "update_at", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["imageurl", "vdfv"], ["price", 1], ["source", "cwdc"], ["title", "wcd"], ["update_at", "cdw"], ["url", "cd"], ["created_at", "2018-05-16 19:30:16.289429"], ["updated_at", "2018-05-16 19:30:16.289429"]]
+  ↳ app/controllers/competitor_prices_controller.rb:37
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/competitor_prices_controller.rb:37
+Redirected to http://localhost:3000/competitor_prices/5
+Completed 302 Found in 15ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/competitor_prices/5" for 172.21.0.1 at 2018-05-16 19:30:16 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCompetitorPrice Load (0.8ms)[0m  [1m[34mSELECT  "competitor_prices".* FROM "competitor_prices" WHERE "competitor_prices"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/competitor_prices_controller.rb:74
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 172.21.0.1 at 2018-05-16 19:48:53 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 19ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:48:58 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (5.6ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 412ms (Views: 362.8ms | ActiveRecord: 27.4ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-16 19:49:01 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (21.8ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 127ms (Views: 115.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-16 19:49:09 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/xFZh2+8j2M11fb9u7WtHbZn9x4MrcEhQVoYnoaOk0+zIfywMsFKUCsoCDmrRHx5X8Za0MthQuQKSEI2M37KNg==", "competitor_price"=>{"imageurl"=>"veve", "price"=>"2", "source"=>"vervev", "title"=>"ervrv", "update_at"=>"ervr", "url"=>"erver"}, "commit"=>"Create Competitor price"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+Errno::EADDRNOTAVAIL (Failed to open TCP connection to localhost:9200 (Address not available - connect(2) for "localhost" port 9200)):
+  
+app/controllers/competitor_prices_controller.rb:105:in `perform_request'
+app/controllers/competitor_prices_controller.rb:44:in `create'
+Started GET "/" for 172.21.0.1 at 2018-05-17 14:02:02 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 24ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 172.21.0.1 at 2018-05-17 14:02:08 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/blogs"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-17 14:02:15 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- faraday):
+  
+app/controllers/competitor_prices_controller.rb:2:in `<main>'
+Started GET "/" for 172.21.0.1 at 2018-05-17 14:06:21 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (4.1ms)
+Completed 200 OK in 28ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.0.1 at 2018-05-17 14:23:14 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-17 14:44:45 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+LoadError (cannot load such file -- faraday):
+  
+app/controllers/competitor_prices_controller.rb:2:in `<main>'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-17 14:46:33 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- faraday):
+  
+app/controllers/competitor_prices_controller.rb:2:in `<main>'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-17 14:47:33 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- faraday):
+  
+app/controllers/competitor_prices_controller.rb:2:in `<main>'
+Started GET "/%C2%A5" for 172.21.0.1 at 2018-05-17 14:47:37 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/%C2%A5"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 172.21.0.1 at 2018-05-17 14:47:39 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-17 14:47:42 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- faraday):
+  
+app/controllers/competitor_prices_controller.rb:2:in `<main>'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-17 14:48:24 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- faraday):
+  
+app/controllers/competitor_prices_controller.rb:2:in `<main>'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-17 14:48:25 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- faraday):
+  
+app/controllers/competitor_prices_controller.rb:2:in `<main>'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-17 14:50:27 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- faraday):
+  
+app/controllers/competitor_prices_controller.rb:2:in `<main>'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-17 14:50:27 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- faraday):
+  
+app/controllers/competitor_prices_controller.rb:2:in `<main>'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-17 14:50:29 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (cannot load such file -- faraday):
+  
+app/controllers/competitor_prices_controller.rb:2:in `<main>'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-17 21:08:28 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (5.3ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 694ms (Views: 643.4ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-17 21:08:40 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (118.6ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (134.6ms)
+Completed 200 OK in 264ms (Views: 250.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-17 21:09:10 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tiWIgAewTz7hUIkJp9GD4Axc8ctxgQD+rxh7ZswMjTX6FS23Ws2KDf+td823IFKE5f1cBbZNgzvkCiHOefzUTA==", "competitor_price"=>{"imageurl"=>"csddsc", "price"=>"3", "source"=>"dscsdc", "title"=>"sdcsdc", "update_at"=>"sdcsdcsdc", "url"=>"dscsdcs"}, "commit"=>"Create Competitor price"}
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+Faraday::ConnectionFailed (Failed to open TCP connection to 192.168.2.125:9200 (Connection refused - connect(2) for "192.168.2.125" port 9200)):
+  
+app/controllers/competitor_prices_controller.rb:106:in `perform_request'
+app/controllers/competitor_prices_controller.rb:45:in `create'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-17 21:10:17 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (5.2ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 110ms (Views: 91.4ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-17 21:10:19 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (2.5ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 140ms (Views: 127.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-17 21:10:25 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vm5DlSnmHRsW6GNBZ9qWofExUVb+jYMTEM1ukEh5mdHyXuaidJvYKAgVnYV3K0fFGJD8mDlBANZb3zQ4/YnAqA==", "competitor_price"=>{"imageurl"=>"ewfewf", "price"=>"4", "source"=>"cwe", "title"=>"cwec", "update_at"=>"wecwe", "url"=>"cwec"}, "commit"=>"Create Competitor price"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+Faraday::ConnectionFailed (Failed to open TCP connection to 192.168.2.125:9200 (Connection refused - connect(2) for "192.168.2.125" port 9200)):
+  
+app/controllers/competitor_prices_controller.rb:106:in `perform_request'
+app/controllers/competitor_prices_controller.rb:45:in `create'
