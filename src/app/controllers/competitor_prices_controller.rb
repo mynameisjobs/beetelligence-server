@@ -1,6 +1,4 @@
-require 'multi_json'
-require 'faraday'
-require 'elasticsearch/api'
+require 'elasticsearch'
 
 class CompetitorPricesController < ApplicationController
   before_action :set_competitor_price, only: [:show, :edit, :update, :destroy]
@@ -30,21 +28,12 @@ class CompetitorPricesController < ApplicationController
   # POST /competitor_prices
   # POST /competitor_prices.json
   def create
-    client = MySimpleClient.new
 
-    query = Jbuilder.encode do |json|
-      json.query do
-        json.match do
-          json.title do
-            json.query'牛排'
-          end
-        end
-      end
-    end
+    client = Elasticsearch::Client.new host: 'http://192.168.2.125:9200'
+    client.search index: 'honestbee', body: {"query":{"match":{"title":{"query":"牛排"}}}} -H 'Content-Type: application/json'
+ 
 
-    client.search index: 'honestbee', body: query
-    @competitor_price = CompetitorPrice.new(competitor_price_params)
-    binding.pry
+
     respond_to do |format|
       if @competitor_price.save
         format.html { redirect_to @competitor_price, notice: 'Competitor price was successfully created.' }
@@ -96,21 +85,4 @@ require 'multi_json'
 require 'faraday'
 require 'elasticsearch/api'
 
-class MySimpleClient
-  include Elasticsearch::API
 
-  CONNECTION = ::Faraday::Connection.new url: 'http://192.168.2.125:9200'
-
-  def perform_request(method, path, params, body)
-    puts "--> #{method.upcase} #{path} #{params} #{body}"
-
-    CONNECTION.run_request \
-      method.downcase.to_sym,
-      path,
-      ( body ? MultiJson.dump(body): nil ),
-      {'Content-Type' => 'application/json'}
-  end
-end
-
-
-client.index index: 'myindex', type: 'mytype', id: 'custom', body: { title: "Indexing from my client" }
