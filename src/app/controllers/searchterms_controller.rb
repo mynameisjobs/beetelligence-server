@@ -28,15 +28,21 @@ class SearchtermsController < ApplicationController
   def create
     @searchterm = Searchterm.new(searchterm_params)
 
-    respond_to do |format|
-      if @searchterm.save
-        format.html { redirect_to @searchterm, notice: 'Searchterm was successfully created.' }
-        format.json { render :show, status: :created, location: @searchterm }
-      else
-        format.html { render :new }
-        format.json { render json: @searchterm.errors, status: :unprocessable_entity }
-      end
+    if @searchterm.save
+      render {"status": "ok"}
+    else
+      render :new
     end
+    # respond_to do |format|
+    #   if @searchterm.save
+    #     render :show
+    #     # format.html { redirect_to @searchterm, notice: 'Searchterm was successfully created.' }
+    #     # format.json { render :show, status: :created, location: @searchterm }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @searchterm.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /searchterms/1
