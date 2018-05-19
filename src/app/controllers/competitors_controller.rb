@@ -1,3 +1,5 @@
+require 'net/http'
+
 class CompetitorsController < ApplicationController
   before_action :set_competitor, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token
@@ -27,7 +29,6 @@ class CompetitorsController < ApplicationController
   # POST /competitors
   # POST /competitors.json
   def create
-
     client = Elasticsearch::Client.new host: "http://#{ENV['ES_HOST']}:9200"
     #client = Elasticsearch::Client.new host: "http://192.168.100.6:9200"
     product_name = competitor_params[:title]
@@ -36,7 +37,15 @@ class CompetitorsController < ApplicationController
     #Array
     @data = es_response['hits']['hits'].map { |r| r['_source']}
 
-    @competitor_price = Competitor.new(competitor_params)
+    #GetProductCatalog
+    url = URI.parse(URI.escape("http://#{ENV['FLASK_HOST']}:30003/predict?title=#{product_name}"))
+    req = Net::HTTP::Get.new(url.to_s)
+    res = Net::HTTP.start(url.host, url.port) {|http|
+      http.request(req)
+    }
+    res_catalog = res.body
+
+    @competitor_price = Competitor.new(competitor_params.merge(:catalog => res_catalog))
     if @competitor_price.save
       render :json => @data
     else
