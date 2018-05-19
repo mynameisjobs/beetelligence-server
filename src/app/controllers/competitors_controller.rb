@@ -28,8 +28,8 @@ class CompetitorsController < ApplicationController
   # POST /competitors.json
   def create
 
-    #client = Elasticsearch::Client.new host: "http://#{ENV['ES_HOST']}:9200"
-    client = Elasticsearch::Client.new host: "http://192.168.100.6:9200"
+    client = Elasticsearch::Client.new host: "http://#{ENV['ES_HOST']}:9200"
+    #client = Elasticsearch::Client.new host: "http://192.168.100.6:9200"
     product_name = competitor_params[:title]
     query =  { "_source": ["title", "price","store_id","product_id","store_name","imageurl","size","url","updated_at","status","currency"], "query":{ "match":{ "title":{"query":product_name} } } }
     es_response =client.search index: 'honestbee', body: query
