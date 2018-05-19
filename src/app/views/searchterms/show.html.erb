@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @searchterm.user_id %>
+</p>
+
+<p>
+  <strong>Search term:</strong>
+  <%= @searchterm.search_term %>
+</p>
+
+<%= link_to 'Edit', edit_searchterm_path(@searchterm) %> |
+<%= link_to 'Back', searchterms_path %>
