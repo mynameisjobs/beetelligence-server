@@ -1,4 +1,5 @@
 require 'net/http'
+require 'faraday'
 
 class CompetitorsController < ApplicationController
   before_action :set_competitor, only: [:show, :edit, :update, :destroy]
@@ -29,8 +30,12 @@ class CompetitorsController < ApplicationController
   # POST /competitors
   # POST /competitors.json
   def create
-    client = Elasticsearch::Client.new host: "http://#{ENV['ES_HOST']}:9200"
+    #dev
     #client = Elasticsearch::Client.new host: "http://192.168.100.6:9200"
+    #url = URI.parse(URI.escape("http://192.168.100.6:30003/predict?title=#{product_name}"))
+    #
+
+    client = Elasticsearch::Client.new host: "http://#{ENV['ES_HOST']}:9200"
     product_name = competitor_params[:title]
     query =  { "_source": ["title", "price","store_id","product_id","store_name","imageurl","size","url","updated_at","status","currency"], "query":{ "match":{ "title":{"query":product_name} } } }
     es_response =client.search index: 'honestbee', body: query
@@ -39,10 +44,7 @@ class CompetitorsController < ApplicationController
 
     #GetProductCatalog
     url = URI.parse(URI.escape("http://#{ENV['FLASK_HOST']}:30003/predict?title=#{product_name}"))
-    req = Net::HTTP::Get.new(url.to_s)
-    res = Net::HTTP.start(url.host, url.port) {|http|
-      http.request(req)
-    }
+    res = Faraday.get url
     res_catalog = res.body
 
     @competitor = Competitor.new(competitor_params.merge(:catalog => res_catalog))

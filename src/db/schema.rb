@@ -41,4 +41,11 @@ ActiveRecord::Schema.define(version: 2018_05_19_051215) do
     t.string "catalog", default: ""
   end
 
+  create_table "searchterms", force: :cascade do |t|
+    t.string "user_id"
+    t.string "search_term"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end

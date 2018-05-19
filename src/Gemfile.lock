@@ -216,6 +216,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   elasticsearch
+  faraday
   jbuilder (~> 2.5)
   json
   listen (>= 3.0.5, < 3.2)

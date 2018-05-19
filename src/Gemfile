@@ -22,6 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'elasticsearch'
 gem 'pry', '~> 0.10.3'
 gem 'json'
+gem 'faraday'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
