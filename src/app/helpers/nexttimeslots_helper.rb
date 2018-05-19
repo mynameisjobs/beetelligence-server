@@ -1,0 +1,2 @@
+module NexttimeslotsHelper
+end

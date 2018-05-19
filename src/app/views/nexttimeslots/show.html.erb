@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Store:</strong>
+  <%= @nexttimeslot.store_id %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @nexttimeslot.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @nexttimeslot.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_nexttimeslot_path(@nexttimeslot) %> |
+<%= link_to 'Back', nexttimeslots_path %>

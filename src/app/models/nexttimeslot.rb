@@ -1,0 +1,2 @@
+class Nexttimeslot < ApplicationRecord
+end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :nexttimeslots
   resources :searchterms
   resources :competitors
   resources :competitor_prices
