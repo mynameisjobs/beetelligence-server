@@ -42,13 +42,13 @@ class CompetitorsController < ApplicationController
     es_response =client.search index: 'honestbee', body: query
     products_array = []
     @data = es_response['hits']['hits'].map { |r| r['_source']}
-    @data.each do |item|
-      api_url = "https://www.honestbee.tw/api/api/next_available_timeslot?storeId=#{item['store_id']}&latitude=#{competitor_params[:latitude]}&longitude=#{competitor_params[:longitude]}"
-      api_res = Faraday.get api_url
-      api_resstr = api_res.body
-      item.merge!(JSON.parse(api_resstr)['timeslot'])
-      products_array.push(item)
-    end
+    # @data.each do |item|
+    #   api_url = "https://www.honestbee.tw/api/api/next_available_timeslot?storeId=#{item['store_id']}&latitude=#{competitor_params[:latitude]}&longitude=#{competitor_params[:longitude]}"
+    #   api_res = Faraday.get api_url
+    #   api_resstr = api_res.body
+    #   item.merge!(JSON.parse(api_resstr)['timeslot'])
+    #   products_array.push(item)
+    # end
     #GetProductCatalog
     predict_url = URI.parse(URI.escape("http://#{ENV['FLASK_HOST']}:#{ENV['FLASK_PORT']}/predict?title=#{product_name}"))
   
@@ -57,7 +57,8 @@ class CompetitorsController < ApplicationController
 
     @competitor = Competitor.new(competitor_params.merge(:catalog => predict_catalog))
     if @competitor.save
-      render :json => products_array
+      #render :json => products_array
+      render :json => @data
     else
       render :json => { status => "404 Please contact admin." }
     end
