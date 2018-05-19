@@ -26,7 +26,13 @@ development:
   <<: *default
   database: myapp_development
 
-
 test:
   <<: *default
   database: myapp_test
+
+production:
+  <<: *default
+  database: honestbee
+  host: <%= ENV['DATABASE_HOST'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>

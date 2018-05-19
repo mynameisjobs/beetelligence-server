@@ -28,7 +28,7 @@ class CompetitorPricesController < ApplicationController
   # POST /competitor_prices
   # POST /competitor_prices.json
   def create
-    client = Elasticsearch::Client.new host: 'http://192.168.100.6:9200'
+    client = Elasticsearch::Client.new host: "http://#{ENV['ES_HOST']}:9200"
     product_name = competitor_price_params[:title]
     query =  { "_source": ["title", "price","store_id","product_id","store_name","imageurl","size","url","updated_at","status","currency"], "query":{ "match":{ "title":{"query":product_name} } } }
     es_response =client.search index: 'honestbee', body: query
@@ -37,7 +37,10 @@ class CompetitorPricesController < ApplicationController
     #Array
     @data = es_response['hits']['hits'].map { |r| r['_source']}
     @competitor_price = CompetitorPrice.new(competitor_price_params)
-    render :json => @data
+    if @competitor_price.save
+      render :json => @data
+    else
+    end
     #respond_to do |format|
     #  if @competitor_price.save
     #    render :json => @data
