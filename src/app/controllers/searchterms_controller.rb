@@ -29,7 +29,7 @@ class SearchtermsController < ApplicationController
     @searchterm = Searchterm.new(searchterm_params)
 
     if @searchterm.save
-      render {"status": "ok"}
+      render json: {"status" => "ok"}
     else
       render :new
     end
