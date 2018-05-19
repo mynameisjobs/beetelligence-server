@@ -2042,3 +2042,179 @@ Processing by CompetitorPricesController#create as HTML
 Completed 200 OK in 44ms (Views: 1.7ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (1194.6ms)[0m  [1m[35mCREATE DATABASE "myapp_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1201.9ms)[0m  [1m[35mCREATE DATABASE "myapp_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (42.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (15.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCompetitorPrices (20180516171532)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (23.0ms)[0m  [1m[35mCREATE TABLE "competitor_prices" ("id" bigserial primary key, "imageurl" character varying, "price" integer, "source" character varying, "title" text, "update_at" character varying, "url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180516171532_create_competitor_prices.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (5.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180516171532"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateCompetitors (20180519042623)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (19.2ms)[0m  [1m[35mCREATE TABLE "competitors" ("id" bigserial primary key, "imageurl" character varying, "latitude" character varying, "longitude" character varying, "price" integer, "source" character varying, "title" character varying, "update_at" character varying, "url" character varying, "user_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180519042623_create_competitors.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180519042623"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (2.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (3.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-19 04:26:39.553627"], ["updated_at", "2018-05-19 04:26:39.553627"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 172.21.0.1 at 2018-05-19 04:30:49 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (6.0ms)
+Completed 200 OK in 32ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-19 04:30:52 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (3.1ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 1075ms (Views: 1020.3ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/competitorprice" for 172.21.0.1 at 2018-05-19 04:30:56 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/competitorprice"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/competitors" for 172.21.0.1 at 2018-05-19 04:31:30 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorsController#index as HTML
+  Rendering competitors/index.html.erb within layouts/application
+  [1m[36mCompetitor Load (2.5ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+  ↳ app/views/competitors/index.html.erb:22
+  Rendered competitors/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 128ms (Views: 105.6ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/competitors/new" for 172.21.0.1 at 2018-05-19 04:31:34 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorsController#new as HTML
+  Rendering competitors/new.html.erb within layouts/application
+  Rendered competitors/_form.html.erb (36.2ms)
+  Rendered competitors/new.html.erb within layouts/application (45.3ms)
+Completed 200 OK in 169ms (Views: 140.6ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/competitors" for 172.21.0.1 at 2018-05-19 04:32:14 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7MbCVAHs+KMPoNuKmYEewhwZEaOd8/8zbjh5DrmjxsoOtm5xF1+xLoyrDofJ2C6NGdD+NLkHxu4NS1NXjBsPjA==", "competitor"=>{"imageurl"=>"http://localhost:3000/competitors/new", "latitude"=>"25.123", "longitude"=>"25.123", "price"=>"50", "source"=>"http://localhost:3000/competitors/new", "title"=>"菲力牛排", "update_at"=>"2015-08-23", "url"=>"http://localhost:3000/competitors/new", "user_id"=>"12312-123123-123123-1231"}, "commit"=>"Create Competitor"}
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 4.4ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'latitude' for CompetitorPrice.):
+  
+app/controllers/competitors_controller.rb:39:in `create'
+Started POST "/competitors" for 172.21.0.1 at 2018-05-19 04:34:52 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"51ZkSWyzst6ykTp4cxYQ1lJMBfv/A8cNdsSpIarT26kIXrAAv2trWYYm4W0WOYqNQgNUjWTw3wVhoSvnIHmX3A==", "competitor"=>{"imageurl"=>"http://localhost:3000/competitors/new", "latitude"=>"25.123", "longitude"=>"25.123", "price"=>"50", "source"=>"http://localhost:3000/competitors/new", "title"=>"菲力牛排", "update_at"=>"2015-08-23", "url"=>"http://localhost:3000/competitors/new", "user_id"=>"12312-123123-123123-1231"}, "commit"=>"Create Competitor"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/competitors_controller.rb:40
+  [1m[36mCompetitor Create (3.0ms)[0m  [1m[32mINSERT INTO "competitors" ("imageurl", "latitude", "longitude", "price", "source", "title", "update_at", "url", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["imageurl", "http://localhost:3000/competitors/new"], ["latitude", "25.123"], ["longitude", "25.123"], ["price", 50], ["source", "http://localhost:3000/competitors/new"], ["title", "菲力牛排"], ["update_at", "2015-08-23"], ["url", "http://localhost:3000/competitors/new"], ["user_id", "12312-123123-123123-1231"], ["created_at", "2018-05-19 04:34:52.628644"], ["updated_at", "2018-05-19 04:34:52.628644"]]
+  ↳ app/controllers/competitors_controller.rb:40
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/competitors_controller.rb:40
+Completed 200 OK in 95ms (Views: 1.1ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/competitors" for 172.21.0.1 at 2018-05-19 04:34:55 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorsController#index as HTML
+  Rendering competitors/index.html.erb within layouts/application
+  [1m[36mCompetitor Load (1.4ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+  ↳ app/views/competitors/index.html.erb:22
+  Rendered competitors/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 109ms (Views: 97.8ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mCompetitor Load (3.2ms)[0m  [1m[34mSELECT  "competitors".* FROM "competitors" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/competitors/1" for 172.21.0.1 at 2018-05-19 04:37:32 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompetitor Load (0.9ms)[0m  [1m[34mSELECT  "competitors".* FROM "competitors" WHERE "competitors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/competitors_controller.rb:83
+Completed 200 OK in 31ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/competitors/1" for 172.21.0.1 at 2018-05-19 04:37:32 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompetitor Load (1.1ms)[0m  [1m[34mSELECT  "competitors".* FROM "competitors" WHERE "competitors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/competitors_controller.rb:83
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/competitors" for 172.21.0.1 at 2018-05-19 04:37:35 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorsController#index as HTML
+  Rendering competitors/index.html.erb within layouts/application
+  [1m[36mCompetitor Load (1.2ms)[0m  [1m[34mSELECT "competitors".* FROM "competitors"[0m
+  ↳ app/views/competitors/index.html.erb:22
+  Rendered competitors/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 100ms (Views: 88.8ms | ActiveRecord: 1.2ms)
+
+

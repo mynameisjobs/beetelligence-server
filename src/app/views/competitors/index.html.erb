@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Competitors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Imageurl</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Price</th>
+      <th>Source</th>
+      <th>Title</th>
+      <th>Update at</th>
+      <th>Url</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @competitors.each do |competitor| %>
+      <tr>
+        <td><%= competitor.imageurl %></td>
+        <td><%= competitor.latitude %></td>
+        <td><%= competitor.longitude %></td>
+        <td><%= competitor.price %></td>
+        <td><%= competitor.source %></td>
+        <td><%= competitor.title %></td>
+        <td><%= competitor.update_at %></td>
+        <td><%= competitor.url %></td>
+        <td><%= competitor.user_id %></td>
+        <td><%= link_to 'Show', competitor %></td>
+        <td><%= link_to 'Edit', edit_competitor_path(competitor) %></td>
+        <td><%= link_to 'Destroy', competitor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Competitor', new_competitor_path %>
