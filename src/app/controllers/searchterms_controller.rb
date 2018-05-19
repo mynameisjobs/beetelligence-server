@@ -11,6 +11,7 @@ class SearchtermsController < ApplicationController
   # GET /searchterms/1
   # GET /searchterms/1.json
   def show
+    render json: {"status" => "ok"}
   end
 
   # GET /searchterms/new
