@@ -37,7 +37,7 @@ class CompetitorsController < ApplicationController
 
     client = Elasticsearch::Client.new host: "http://#{ENV['ES_HOST']}:9200"
     product_name = competitor_params[:title]
-    query =  { "_source": ["title", "price","store_id","product_id","store_name","imageurl","size","url","updated_at","status","currency"], "query":{ "match":{ "title":{"query":product_name} } } }
+    query =  { "_source": ["title", "price","store_id","product_id","store_name","imageurl","size","url","updated_at","status","currency"], "query":{"bool":{"filter":[{"term":{"status":"status_available"}}],"must":[{"match":{"title":product_name}}]}} }
     es_response =client.search index: 'honestbee', body: query
     #Array
     @data = es_response['hits']['hits'].map { |r| r['_source']}
