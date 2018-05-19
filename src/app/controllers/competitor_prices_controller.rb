@@ -28,21 +28,30 @@ class CompetitorPricesController < ApplicationController
   # POST /competitor_prices
   # POST /competitor_prices.json
   def create
+    client = Elasticsearch::Client.new host: 'http://192.168.100.6:9200'
+    #test = params[:title]
+    #puts test
+    #query = { "_source": ["title", "price","imageurl","size","url","status","currency"], "query":{ "match":{ "title":{"query": {test}} } } }
+    #puts query
+    #es_response =client.search index: 'honestbee', body: { "_source": ["title", "price","imageurl","size","url","status","currency"], "query":{ "match":{ "title":{"query": test } } }
+    es_response =client.search index: 'honestbee', body: { "_source": ["title", "price","store_id","product_id","store_name","imageurl","size","url","updated_at","status","currency"], "query":{ "match":{ "title":{"query":"牛排"} } } }
+    #Array
+    @data = es_response['hits']['hits'].map { |r| r['_source']}
+    #ob = JSON.parse(@data.to_json , object_class: OpenStruct)
 
-    client = Elasticsearch::Client.new host: 'http://192.168.2.125:9200'
-    client.search index: 'honestbee', body: {"query":{"match":{"title":{"query":"牛排"}}}} -H 'Content-Type: application/json'
- 
-
-
-    respond_to do |format|
-      if @competitor_price.save
-        format.html { redirect_to @competitor_price, notice: 'Competitor price was successfully created.' }
-        format.json { render :show, status: :created, location: @competitor_price }
-      else
-        format.html { render :new }
-        format.json { render json: @competitor_price.errors, status: :unprocessable_entity }
-      end
-    end
+    @competitor_price = CompetitorPrice.new(competitor_price_params)
+    render :json => @data
+    #respond_to do |format|
+    #  if @competitor_price.save
+    #    render :json => @data
+    #    #format.json { render :json => @data }
+    #    #format.html { redirect_to @data, notice: 'Competitor price was successfully created.' }
+    #    #format.json { render :show, status: :created, location: @competitor_price }
+    #  else
+    #    format.html { render :new }
+    #    format.json { render json: @competitor_price.errors, status: :unprocessable_entity }
+    #  end
+    #end
   end
 
   # PATCH/PUT /competitor_prices/1
@@ -80,9 +89,3 @@ class CompetitorPricesController < ApplicationController
       params.require(:competitor_price).permit(:imageurl, :price, :source, :title, :update_at, :url)
     end
 end
-
-require 'multi_json'
-require 'faraday'
-require 'elasticsearch/api'
-
-

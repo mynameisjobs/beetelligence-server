@@ -1228,3 +1228,519 @@ Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.0ms)
 Elasticsearch::Transport::Transport::Errors::NotAcceptable ([406] {"error":"Content-Type header [application/x-www-form-urlencoded] is not supported","status":406}):
   
 app/controllers/competitor_prices_controller.rb:33:in `create'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-18 15:34:40 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/app/app/controllers/competitor_prices_controller.rb:33: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...tle":{"query":"牛排"}}}} -H 'Content-Type: application/jso...
+...                              ^):
+  
+app/controllers/competitor_prices_controller.rb:33: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-18 15:35:00 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (2.8ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 125ms (Views: 88.2ms | ActiveRecord: 22.4ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-18 15:35:02 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (2.4ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 105ms (Views: 92.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-18 15:35:11 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ipTyU2lBOBaxi5FQ45g39OQ6FKotx+J3P+QzimLa5R3GpFdkNDz9Ja92b5TzaeaQDZu5ZOoLYbJ09mki1yq8ZA==", "competitor_price"=>{"imageurl"=>"cc", "price"=>"20", "source"=>"www", "title"=>"www", "update_at"=>"22", "url"=>"22"}, "commit"=>"Create Competitor price"}
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+
+  
+Elasticsearch::Transport::Transport::Errors::NotAcceptable ([406] {"error":"Content-Type header [application/x-www-form-urlencoded] is not supported","status":406}):
+  
+app/controllers/competitor_prices_controller.rb:33:in `create'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-18 15:47:50 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (6.0ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (46.2ms)
+Completed 200 OK in 629ms (Views: 582.7ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-18 15:47:55 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (3.4ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 124ms (Views: 109.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-18 15:47:56 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (65.5ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (74.4ms)
+Completed 200 OK in 204ms (Views: 166.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-18 15:48:02 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U15GTpNLdSI3CSHKICvz8MVcXEm9tkO+VCr6cJfsgT8fbuN5zjawESn03w4w2iKULP3xh3p6wHsfOKDYIhzYRg==", "competitor_price"=>{"imageurl"=>"qwe", "price"=>"20", "source"=>"qwd", "title"=>"qwdeq", "update_at"=>"qwdqwd", "url"=>"qwd"}, "commit"=>"Create Competitor price"}
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/competitor_prices_controller.rb:38:in `block in create'
+app/controllers/competitor_prices_controller.rb:37:in `create'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-18 15:50:06 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kK/BB/gqnrOh3sseRq0tpd8W7y0CO7+aD9fXCvVHDFt/pxVOK/JHNJVpEAsjgrf+z1m+W5nIp5IYslXMf+1ALg==", "competitor_price"=>{"imageurl"=>"qwe", "price"=>"20", "source"=>"qwd", "title"=>"qwdeq", "update_at"=>"qwdqwd", "url"=>"qwd"}, "commit"=>"Create Competitor price"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/competitor_prices_controller.rb:38
+  [1m[36mCompetitorPrice Create (9.7ms)[0m  [1m[32mINSERT INTO "competitor_prices" ("imageurl", "price", "source", "title", "update_at", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["imageurl", "qwe"], ["price", 20], ["source", "qwd"], ["title", "qwdeq"], ["update_at", "qwdqwd"], ["url", "qwd"], ["created_at", "2018-05-18 15:50:16.999834"], ["updated_at", "2018-05-18 15:50:16.999834"]]
+  ↳ app/controllers/competitor_prices_controller.rb:38
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/competitor_prices_controller.rb:38
+Redirected to http://localhost:3000/competitor_prices/6
+Completed 302 Found in 188ms (ActiveRecord: 35.4ms)
+
+
+Started GET "/competitor_prices/6" for 172.21.0.1 at 2018-05-18 15:50:17 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCompetitorPrice Load (1.2ms)[0m  [1m[34mSELECT  "competitor_prices".* FROM "competitor_prices" WHERE "competitor_prices"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/competitor_prices_controller.rb:75
+Completed 200 OK in 15ms (Views: 0.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 172.21.0.1 at 2018-05-18 15:55:01 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 24ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.0.1 at 2018-05-19 01:22:33 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (8.1ms)
+Completed 200 OK in 38ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:22:37 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (6.9ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (54.4ms)
+Completed 200 OK in 670ms (Views: 623.5ms | ActiveRecord: 27.5ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-19 01:22:40 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (57.7ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (66.6ms)
+Completed 200 OK in 162ms (Views: 151.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:22:50 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9PwV4vvA0eHFhZZrOs8kyt+7pslNyssv3A5Pl2bxEVO4zLDVpr0U0tt4aK8qPvWuNhoLB4oGSOqXHBU/0wFIKg==", "competitor_price"=>{"imageurl"=>"123", "price"=>"30", "source"=>"32", "title"=>"32", "update_at"=>"23", "url"=>"23"}, "commit"=>"Create Competitor price"}
+Completed 500 Internal Server Error in 172ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `data' for #<CompetitorPricesController:0x0000558504d118f0>):
+  
+app/controllers/competitor_prices_controller.rb:33:in `create'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:23:03 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M+bbfg5cIWk46+/H0ktRsyUHDCOhm7A+3Eu4FHnRSanc7g833YT47gxcNNK3ZMvoNUhdVTpoqDbLLjrS83sF3A==", "competitor_price"=>{"imageurl"=>"123", "price"=>"30", "source"=>"32", "title"=>"32", "update_at"=>"23", "url"=>"23"}, "commit"=>"Create Competitor price"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/competitor_prices_controller.rb:40
+  [1m[36mCompetitorPrice Create (5.2ms)[0m  [1m[32mINSERT INTO "competitor_prices" ("imageurl", "price", "source", "title", "update_at", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["imageurl", "123"], ["price", 30], ["source", "32"], ["title", "32"], ["update_at", "23"], ["url", "23"], ["created_at", "2018-05-19 01:23:13.759374"], ["updated_at", "2018-05-19 01:23:13.759374"]]
+  ↳ app/controllers/competitor_prices_controller.rb:40
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/competitor_prices_controller.rb:40
+Completed 406 Not Acceptable in 217ms (ActiveRecord: 14.5ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/competitor_prices_controller.rb:39:in `create'
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-19 01:24:28 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (31.3ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 549ms (Views: 492.3ms | ActiveRecord: 17.1ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:24:39 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yRUor9WtSww/8DzRN6p0JdWxCvuZ1GT0tPGNqmxfi84mHfzmBnWSiwtH58RShe5+xf5bjQInfPyjlA9s5vXHuw==", "competitor_price"=>{"imageurl"=>"123", "price"=>"40", "source"=>"22", "title"=>"22", "update_at"=>"22", "url"=>"22"}, "commit"=>"Create Competitor price"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/competitor_prices_controller.rb:40
+  [1m[36mCompetitorPrice Create (5.9ms)[0m  [1m[32mINSERT INTO "competitor_prices" ("imageurl", "price", "source", "title", "update_at", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["imageurl", "123"], ["price", 40], ["source", "22"], ["title", "22"], ["update_at", "22"], ["url", "22"], ["created_at", "2018-05-19 01:24:39.301153"], ["updated_at", "2018-05-19 01:24:39.301153"]]
+  ↳ app/controllers/competitor_prices_controller.rb:40
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/competitor_prices_controller.rb:40
+Completed 406 Not Acceptable in 172ms (ActiveRecord: 7.5ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/competitor_prices_controller.rb:39:in `create'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:24:51 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yRUor9WtSww/8DzRN6p0JdWxCvuZ1GT0tPGNqmxfi84mHfzmBnWSiwtH58RShe5+xf5bjQInfPyjlA9s5vXHuw==", "competitor_price"=>{"imageurl"=>"123", "price"=>"40", "source"=>"22", "title"=>"22", "update_at"=>"22", "url"=>"22"}, "commit"=>"Create Competitor price"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/competitor_prices_controller.rb:38
+  [1m[36mCompetitorPrice Create (0.4ms)[0m  [1m[32mINSERT INTO "competitor_prices" ("imageurl", "price", "source", "title", "update_at", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["imageurl", "123"], ["price", 40], ["source", "22"], ["title", "22"], ["update_at", "22"], ["url", "22"], ["created_at", "2018-05-19 01:25:01.979668"], ["updated_at", "2018-05-19 01:25:01.979668"]]
+  ↳ app/controllers/competitor_prices_controller.rb:38
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/competitor_prices_controller.rb:38
+Completed 406 Not Acceptable in 97ms (ActiveRecord: 21.5ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/competitor_prices_controller.rb:37:in `create'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:25:45 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (1.1ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 162ms (Views: 149.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:26:08 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yRUor9WtSww/8DzRN6p0JdWxCvuZ1GT0tPGNqmxfi84mHfzmBnWSiwtH58RShe5+xf5bjQInfPyjlA9s5vXHuw==", "competitor_price"=>{"imageurl"=>"12334444", "price"=>"40", "source"=>"44422", "title"=>"22444", "update_at"=>"22444", "url"=>"22444"}, "commit"=>"Create Competitor price"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/competitor_prices_controller.rb:37
+  [1m[36mCompetitorPrice Create (0.4ms)[0m  [1m[32mINSERT INTO "competitor_prices" ("imageurl", "price", "source", "title", "update_at", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["imageurl", "12334444"], ["price", 40], ["source", "44422"], ["title", "22444"], ["update_at", "22444"], ["url", "22444"], ["created_at", "2018-05-19 01:26:08.863277"], ["updated_at", "2018-05-19 01:26:08.863277"]]
+  ↳ app/controllers/competitor_prices_controller.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/competitor_prices_controller.rb:37
+Completed 406 Not Acceptable in 30ms (ActiveRecord: 10.7ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/competitor_prices_controller.rb:36:in `create'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:27:41 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (1.2ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 108ms (Views: 83.9ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-19 01:27:44 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (2.5ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 142ms (Views: 127.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:27:51 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pgt7021MI5Ym87Trecgwjdz9CLCq6OmxrOKVPfjVwcjqO97kMDHmpTgOSi9pOeHpNVylfm0kanTn8M+VTSWYsQ==", "competitor_price"=>{"imageurl"=>"123", "price"=>"33", "source"=>"33", "title"=>"33", "update_at"=>"33", "url"=>"33"}, "commit"=>"Create Competitor price"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/competitor_prices_controller.rb:38
+  [1m[36mCompetitorPrice Create (0.5ms)[0m  [1m[32mINSERT INTO "competitor_prices" ("imageurl", "price", "source", "title", "update_at", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["imageurl", "123"], ["price", 33], ["source", "33"], ["title", "33"], ["update_at", "33"], ["url", "33"], ["created_at", "2018-05-19 01:27:51.943444"], ["updated_at", "2018-05-19 01:27:51.943444"]]
+  ↳ app/controllers/competitor_prices_controller.rb:38
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/competitor_prices_controller.rb:38
+Completed 406 Not Acceptable in 7ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/competitor_prices_controller.rb:37:in `create'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:28:32 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qk4r5dAnED/5hRG9jsBjOtIHdl7SwHeoLmNYlxKgYSNFRv+sA//JuM0yyqjr7/lhwkgnKEkzb6A5BtpRmAotVg==", "competitor_price"=>{"imageurl"=>"123", "price"=>"33", "source"=>"33", "title"=>"33", "update_at"=>"33", "url"=>"33"}, "commit"=>"Create Competitor price"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/competitor_prices_controller.rb:38
+  [1m[36mCompetitorPrice Create (0.5ms)[0m  [1m[32mINSERT INTO "competitor_prices" ("imageurl", "price", "source", "title", "update_at", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["imageurl", "123"], ["price", 33], ["source", "33"], ["title", "33"], ["update_at", "33"], ["url", "33"], ["created_at", "2018-05-19 01:28:32.509989"], ["updated_at", "2018-05-19 01:28:32.509989"]]
+  ↳ app/controllers/competitor_prices_controller.rb:38
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/competitor_prices_controller.rb:38
+Completed 406 Not Acceptable in 37ms (ActiveRecord: 16.9ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/competitor_prices_controller.rb:37:in `create'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:29:38 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qk4r5dAnED/5hRG9jsBjOtIHdl7SwHeoLmNYlxKgYSNFRv+sA//JuM0yyqjr7/lhwkgnKEkzb6A5BtpRmAotVg==", "competitor_price"=>{"imageurl"=>"123", "price"=>"33", "source"=>"33", "title"=>"33", "update_at"=>"33", "url"=>"33"}, "commit"=>"Create Competitor price"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/competitor_prices_controller.rb:40
+  [1m[36mCompetitorPrice Create (0.3ms)[0m  [1m[32mINSERT INTO "competitor_prices" ("imageurl", "price", "source", "title", "update_at", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["imageurl", "123"], ["price", 33], ["source", "33"], ["title", "33"], ["update_at", "33"], ["url", "33"], ["created_at", "2018-05-19 01:29:38.478009"], ["updated_at", "2018-05-19 01:29:38.478009"]]
+  ↳ app/controllers/competitor_prices_controller.rb:40
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/competitor_prices_controller.rb:40
+Redirected to 
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 9.1ms)
+
+
+  
+NoMethodError (undefined method `to_model' for #<Hash:0x000055d46f325bd8>):
+  
+app/controllers/competitor_prices_controller.rb:41:in `block (2 levels) in create'
+app/controllers/competitor_prices_controller.rb:39:in `create'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:32:08 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qk4r5dAnED/5hRG9jsBjOtIHdl7SwHeoLmNYlxKgYSNFRv+sA//JuM0yyqjr7/lhwkgnKEkzb6A5BtpRmAotVg==", "competitor_price"=>{"imageurl"=>"123", "price"=>"33", "source"=>"33", "title"=>"33", "update_at"=>"33", "url"=>"33"}, "commit"=>"Create Competitor price"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/competitor_prices_controller.rb:39
+  [1m[36mCompetitorPrice Create (0.4ms)[0m  [1m[32mINSERT INTO "competitor_prices" ("imageurl", "price", "source", "title", "update_at", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["imageurl", "123"], ["price", 33], ["source", "33"], ["title", "33"], ["update_at", "33"], ["url", "33"], ["created_at", "2018-05-19 01:32:08.299980"], ["updated_at", "2018-05-19 01:32:08.299980"]]
+  ↳ app/controllers/competitor_prices_controller.rb:39
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/competitor_prices_controller.rb:39
+Redirected to 
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 11.0ms)
+
+
+  
+NoMethodError (undefined method `to_model' for #<Hash:0x000055d46ff10fb0>):
+  
+app/controllers/competitor_prices_controller.rb:40:in `block (2 levels) in create'
+app/controllers/competitor_prices_controller.rb:38:in `create'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:36:43 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qk4r5dAnED/5hRG9jsBjOtIHdl7SwHeoLmNYlxKgYSNFRv+sA//JuM0yyqjr7/lhwkgnKEkzb6A5BtpRmAotVg==", "competitor_price"=>{"imageurl"=>"123", "price"=>"33", "source"=>"33", "title"=>"33", "update_at"=>"33", "url"=>"33"}, "commit"=>"Create Competitor price"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/competitor_prices_controller.rb:39
+  [1m[36mCompetitorPrice Create (0.4ms)[0m  [1m[32mINSERT INTO "competitor_prices" ("imageurl", "price", "source", "title", "update_at", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["imageurl", "123"], ["price", 33], ["source", "33"], ["title", "33"], ["update_at", "33"], ["url", "33"], ["created_at", "2018-05-19 01:36:43.970945"], ["updated_at", "2018-05-19 01:36:43.970945"]]
+  ↳ app/controllers/competitor_prices_controller.rb:39
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/competitor_prices_controller.rb:39
+Completed 406 Not Acceptable in 91ms (ActiveRecord: 11.8ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/competitor_prices_controller.rb:38:in `create'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:37:26 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qk4r5dAnED/5hRG9jsBjOtIHdl7SwHeoLmNYlxKgYSNFRv+sA//JuM0yyqjr7/lhwkgnKEkzb6A5BtpRmAotVg==", "competitor_price"=>{"imageurl"=>"123", "price"=>"33", "source"=>"33", "title"=>"33", "update_at"=>"33", "url"=>"33"}, "commit"=>"Create Competitor price"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/competitor_prices_controller.rb:39
+  [1m[36mCompetitorPrice Create (0.4ms)[0m  [1m[32mINSERT INTO "competitor_prices" ("imageurl", "price", "source", "title", "update_at", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["imageurl", "123"], ["price", 33], ["source", "33"], ["title", "33"], ["update_at", "33"], ["url", "33"], ["created_at", "2018-05-19 01:37:26.939892"], ["updated_at", "2018-05-19 01:37:26.939892"]]
+  ↳ app/controllers/competitor_prices_controller.rb:39
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/competitor_prices_controller.rb:39
+Completed 406 Not Acceptable in 82ms (ActiveRecord: 10.4ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/competitor_prices_controller.rb:38:in `create'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:38:33 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qk4r5dAnED/5hRG9jsBjOtIHdl7SwHeoLmNYlxKgYSNFRv+sA//JuM0yyqjr7/lhwkgnKEkzb6A5BtpRmAotVg==", "competitor_price"=>{"imageurl"=>"123", "price"=>"33", "source"=>"33", "title"=>"33", "update_at"=>"33", "url"=>"33"}, "commit"=>"Create Competitor price"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/competitor_prices_controller.rb:39
+  [1m[36mCompetitorPrice Create (0.4ms)[0m  [1m[32mINSERT INTO "competitor_prices" ("imageurl", "price", "source", "title", "update_at", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["imageurl", "123"], ["price", 33], ["source", "33"], ["title", "33"], ["update_at", "33"], ["url", "33"], ["created_at", "2018-05-19 01:38:34.123005"], ["updated_at", "2018-05-19 01:38:34.123005"]]
+  ↳ app/controllers/competitor_prices_controller.rb:39
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/competitor_prices_controller.rb:39
+Completed 406 Not Acceptable in 76ms (Views: 1.1ms | ActiveRecord: 9.5ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/competitor_prices_controller.rb:38:in `create'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:38:44 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (1.1ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 119ms (Views: 93.5ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-19 01:38:45 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (2.6ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 124ms (Views: 112.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:38:52 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KI8qWXSnhVGWIFCZnemVpEe4SR7pB71NCn1RCn/UAL9kv49uKdpAYojdrl2NGETArhnk0C7LPohBbwuiyiRZxg==", "competitor_price"=>{"imageurl"=>"qwe", "price"=>"5", "source"=>"de", "title"=>"ee", "update_at"=>"ee", "url"=>"ee"}, "commit"=>"Create Competitor price"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/competitor_prices_controller.rb:40
+  [1m[36mCompetitorPrice Create (0.5ms)[0m  [1m[32mINSERT INTO "competitor_prices" ("imageurl", "price", "source", "title", "update_at", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["imageurl", "qwe"], ["price", 5], ["source", "de"], ["title", "ee"], ["update_at", "ee"], ["url", "ee"], ["created_at", "2018-05-19 01:38:52.941842"], ["updated_at", "2018-05-19 01:38:52.941842"]]
+  ↳ app/controllers/competitor_prices_controller.rb:40
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/competitor_prices_controller.rb:40
+Completed 500 Internal Server Error in 66ms (Views: 1.4ms | ActiveRecord: 1.7ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/competitor_prices_controller.rb:41:in `block in create'
+app/controllers/competitor_prices_controller.rb:39:in `create'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:39:25 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (1.0ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 117ms (Views: 94.4ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-19 01:39:27 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (2.5ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 106ms (Views: 92.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:39:36 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4DqpiJhe0/YiD41t80t/fVtbWrLOiLvRwwd8t6bWPVOsCgy/xSMWxTzyc6njuq4Zsvr3fAlEOBSIFSYfEyZkKg==", "competitor_price"=>{"imageurl"=>"111", "price"=>"23", "source"=>"22", "title"=>"11", "update_at"=>"123", "url"=>"123"}, "commit"=>"Create Competitor price"}
+Completed 200 OK in 46ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:49:11 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFmjIal2WgJ9dzs3RTGQYEjCoYrvqz3cv4IJSmhWe5hjUXdoeq6DhUnA4CIgHgo7WI3w/HRYJdSo54uM4vw37Q==", "competitor_price"=>{"imageurl"=>"http://image.com/rrr", "price"=>"50", "source"=>"http://image.com/rrr", "title"=>"卜蜂經典佐義式嫩雞胸肉", "update_at"=>"2018-05-13", "url"=>"http://image.com/rrr"}, "commit"=>"Create Competitor price"}
+Completed 200 OK in 80ms (Views: 0.1ms | ActiveRecord: 21.2ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:50:01 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/app/app/controllers/competitor_prices_controller.rb:36: syntax error, unexpected tIVAR, expecting '}'
+    @data = es_response['hits']['hits'...
+    ^~~~~):
+  
+app/controllers/competitor_prices_controller.rb:36: syntax error, unexpected tIVAR, expecting '}'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:50:36 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/app/app/controllers/competitor_prices_controller.rb:34: syntax error, unexpected tIDENTIFIER, expecting '}'
+    puts query
+    ^~~~
+/app/app/controllers/competitor_prices_controller.rb:38: syntax error, unexpected tIVAR, expecting '}'
+    @data = es_response['hits']['hits'...
+    ^~~~~):
+  
+app/controllers/competitor_prices_controller.rb:34: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/controllers/competitor_prices_controller.rb:38: syntax error, unexpected tIVAR, expecting '}'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:50:58 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/app/app/controllers/competitor_prices_controller.rb:33: syntax error, unexpected '}', expecting =>
+...tch":{ "title":{"query": {test}} } } }
+...                              ^
+/app/app/controllers/competitor_prices_controller.rb:38: syntax error, unexpected tIVAR, expecting '}'
+    @data = es_response['hits']['hits'...
+    ^~~~~):
+  
+app/controllers/competitor_prices_controller.rb:33: syntax error, unexpected '}', expecting =>
+app/controllers/competitor_prices_controller.rb:38: syntax error, unexpected tIVAR, expecting '}'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:51:36 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/app/app/controllers/competitor_prices_controller.rb:34: syntax error, unexpected '}', expecting =>
+...tch":{ "title":{"query": {test}} } } }
+...                              ^
+/app/app/controllers/competitor_prices_controller.rb:39: syntax error, unexpected tIVAR, expecting '}'
+    @data = es_response['hits']['hits'...
+    ^~~~~):
+  
+app/controllers/competitor_prices_controller.rb:34: syntax error, unexpected '}', expecting =>
+app/controllers/competitor_prices_controller.rb:39: syntax error, unexpected tIVAR, expecting '}'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:56:56 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/app/app/controllers/competitor_prices_controller.rb:34: syntax error, unexpected '}', expecting =>
+...tch":{ "title":{"query": {test}} } } }
+...                              ^):
+  
+app/controllers/competitor_prices_controller.rb:34: syntax error, unexpected '}', expecting =>
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 01:57:14 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFmjIal2WgJ9dzs3RTGQYEjCoYrvqz3cv4IJSmhWe5hjUXdoeq6DhUnA4CIgHgo7WI3w/HRYJdSo54uM4vw37Q==", "competitor_price"=>{"imageurl"=>"http://image.com/rrr", "price"=>"50", "source"=>"http://image.com/rrr", "title"=>"卜蜂經典佐義式嫩雞胸肉", "update_at"=>"2018-05-13", "url"=>"http://image.com/rrr"}, "commit"=>"Create Competitor price"}
+Completed 200 OK in 182ms (Views: 0.8ms | ActiveRecord: 25.0ms)
+
+
