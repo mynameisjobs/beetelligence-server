@@ -45,8 +45,8 @@ class CompetitorsController < ApplicationController
     }
     res_catalog = res.body
 
-    @competitor_price = Competitor.new(competitor_params.merge(:catalog => res_catalog))
-    if @competitor_price.save
+    @competitor = Competitor.new(competitor_params.merge(:catalog => res_catalog))
+    if @competitor.save
       render :json => @data
     else
     end
