@@ -43,7 +43,8 @@ class CompetitorsController < ApplicationController
     @data = es_response['hits']['hits'].map { |r| r['_source']}
 
     #GetProductCatalog
-    url = URI.parse(URI.escape("http://#{ENV['FLASK_HOST']}:30003/predict?title=#{product_name}"))
+    url = URI.parse(URI.escape("http://#{ENV['FLASK_HOST']}:#{ENV['FLASK_PORT']}/predict?title=#{product_name}"))
+  
     res = Faraday.get url
     res_catalog = res.body
 
