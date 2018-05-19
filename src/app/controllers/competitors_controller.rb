@@ -1,5 +1,6 @@
 require 'net/http'
 require 'faraday'
+require 'elasticsearch'
 
 class CompetitorsController < ApplicationController
   before_action :set_competitor, only: [:show, :edit, :update, :destroy]
@@ -39,19 +40,26 @@ class CompetitorsController < ApplicationController
     product_name = competitor_params[:title]
     query =  { "_source": ["title", "price","store_id","product_id","store_name","imageurl","size","url","updated_at","status","currency"], "query":{"bool":{"filter":[{"term":{"status":"status_available"}}],"must":[{"match":{"title":product_name}}]}} }
     es_response =client.search index: 'honestbee', body: query
-    #Array
+    products_array = []
     @data = es_response['hits']['hits'].map { |r| r['_source']}
-
+    @data.each do |item|
+      api_url = "https://www.honestbee.tw/api/api/next_available_timeslot?storeId=#{item['store_id']}&latitude=#{competitor_params[:latitude]}&longitude=#{competitor_params[:longitude]}"
+      api_res = Faraday.get api_url
+      api_resstr = api_res.body
+      item.merge!(JSON.parse(api_resstr)['timeslot'])
+      products_array.push(item)
+    end
     #GetProductCatalog
-    url = URI.parse(URI.escape("http://#{ENV['FLASK_HOST']}:#{ENV['FLASK_PORT']}/predict?title=#{product_name}"))
+    predict_url = URI.parse(URI.escape("http://#{ENV['FLASK_HOST']}:#{ENV['FLASK_PORT']}/predict?title=#{product_name}"))
   
-    res = Faraday.get url
-    res_catalog = res.body
+    predict_res = Faraday.get predict_url
+    predict_catalog = predict_res.body
 
-    @competitor = Competitor.new(competitor_params.merge(:catalog => res_catalog))
+    @competitor = Competitor.new(competitor_params.merge(:catalog => predict_catalog))
     if @competitor.save
-      render :json => @data
+      render :json => products_array
     else
+      render :json => { status => "404 Please contact admin." }
     end
     
     #respond_to do |format|
