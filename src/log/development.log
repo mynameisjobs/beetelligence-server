@@ -1744,3 +1744,301 @@ Processing by CompetitorPricesController#create as HTML
 Completed 200 OK in 182ms (Views: 0.8ms | ActiveRecord: 25.0ms)
 
 
+Started GET "/" for 172.21.0.1 at 2018-05-19 02:03:31 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 21ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:05:01 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:05:12 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:05:12 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (5.0ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 429ms (Views: 389.3ms | ActiveRecord: 24.9ms)
+
+
+Processing by CompetitorPricesController#index as HTML
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (2.9ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (1.0ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (20.0ms)
+  Rendered competitor_prices/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 140ms (Views: 115.6ms | ActiveRecord: 6.6ms)
+
+
+Completed 200 OK in 142ms (Views: 101.5ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-19 02:05:14 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (23.2ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 141ms (Views: 128.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:05:55 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UTzQ3XpTtk81x/mBai/E0iLtQ21zYJeo6BxoufeZcUgdDHXqJy5zfCs6B0V63hW2y0zuo7SsFG2jDjIRQmkoMQ==", "competitor_price"=>{"imageurl"=>" registry.ianchenhq.com", "price"=>"50", "source"=>" registry.ianchenhq.com", "title"=>"卜蜂經典佐義式嫩雞胸肉", "update_at"=>"2018-05-13", "url"=>"registry.ianchenhq.com"}, "commit"=>"Create Competitor price"}
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.0ms)
+
+
+  
+Elasticsearch::Transport::Transport::Errors::BadRequest ([400] {"error":{"root_cause":[{"type":"parsing_exception","reason":"[match] unknown token [VALUE_NULL] after [query]","line":1,"col":159}],"type":"parsing_exception","reason":"[match] unknown token [VALUE_NULL] after [query]","line":1,"col":159},"status":400}):
+  
+app/controllers/competitor_prices_controller.rb:36:in `create'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:06:34 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D2KQEv8TTR6jaE31d+dW14V1r2jEnKdhPJ5ypzZIJgTgakRbLMuUmZffluASyMyMlTr+Hl9vv2kr+/BhvOJqcQ==", "competitor_price"=>{"imageurl"=>" registry.ianchenhq.com", "price"=>"50", "source"=>" registry.ianchenhq.com", "title"=>"卜蜂經典佐義式嫩雞胸肉", "update_at"=>"2018-05-13", "url"=>"registry.ianchenhq.com"}, "commit"=>"Create Competitor price"}
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+
+  
+Elasticsearch::Transport::Transport::Errors::BadRequest ([400] {"error":{"root_cause":[{"type":"parsing_exception","reason":"[match] unknown token [VALUE_NULL] after [query]","line":1,"col":159}],"type":"parsing_exception","reason":"[match] unknown token [VALUE_NULL] after [query]","line":1,"col":159},"status":400}):
+  
+app/controllers/competitor_prices_controller.rb:37:in `create'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:07:00 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D2KQEv8TTR6jaE31d+dW14V1r2jEnKdhPJ5ypzZIJgTgakRbLMuUmZffluASyMyMlTr+Hl9vv2kr+/BhvOJqcQ==", "competitor_price"=>{"imageurl"=>" registry.ianchenhq.com", "price"=>"50", "source"=>" registry.ianchenhq.com", "title"=>"卜蜂經典佐義式嫩雞胸肉", "update_at"=>"2018-05-13", "url"=>"registry.ianchenhq.com"}, "commit"=>"Create Competitor price"}
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms)
+
+
+  
+Elasticsearch::Transport::Transport::Errors::BadRequest ([400] {"error":{"root_cause":[{"type":"parsing_exception","reason":"[match] unknown token [VALUE_NULL] after [query]","line":1,"col":159}],"type":"parsing_exception","reason":"[match] unknown token [VALUE_NULL] after [query]","line":1,"col":159},"status":400}):
+  
+app/controllers/competitor_prices_controller.rb:37:in `create'
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:08:04 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D2KQEv8TTR6jaE31d+dW14V1r2jEnKdhPJ5ypzZIJgTgakRbLMuUmZffluASyMyMlTr+Hl9vv2kr+/BhvOJqcQ==", "competitor_price"=>{"imageurl"=>" registry.ianchenhq.com", "price"=>"50", "source"=>" registry.ianchenhq.com", "title"=>"卜蜂經典佐義式嫩雞胸肉", "update_at"=>"2018-05-13", "url"=>"registry.ianchenhq.com"}, "commit"=>"Create Competitor price"}
+No template found for CompetitorPricesController#create, rendering head :no_content
+Completed 204 No Content in 638ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-19 02:08:12 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (2.8ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 132ms (Views: 90.8ms | ActiveRecord: 10.5ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:08:33 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8i0zajylmQ2DQJTH0cpVzJHI67YJL2AmvCIfDwNodHMdJecj731Airf3T9K05c+XgYe6wJLceC6rR53JicI4Bg==", "competitor_price"=>{"imageurl"=>"123", "price"=>"40", "source"=>"333", "title"=>"3333", "update_at"=>"2018-05-13", "url"=>"333"}, "commit"=>"Create Competitor price"}
+No template found for CompetitorPricesController#create, rendering head :no_content
+Completed 204 No Content in 500ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-19 02:09:01 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (2.4ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 133ms (Views: 97.6ms | ActiveRecord: 11.8ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:09:15 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vpTcKa35ZIK0UQWIGgbtha51SB0ZvTW0/g2mH2gVgMVRnAhgfiG9BYDm3p1/KXfevjoZa4JOLbzpaCTZ4r/MsA==", "competitor_price"=>{"imageurl"=>"qwe", "price"=>"30", "source"=>"qweqw", "title"=>"qweqwe", "update_at"=>"2018-05-13", "url"=>"qwe"}, "commit"=>"Create Competitor price"}
+No template found for CompetitorPricesController#create, rendering head :no_content
+Completed 204 No Content in 621ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-19 02:10:06 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (2.4ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 117ms (Views: 83.4ms | ActiveRecord: 9.1ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:10:17 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HCgZPjgxsczonLdYliJ6/6oWBS6uHakHigCmazFiMLTzIM136+loS9wrbE3zDeCkullUWDXusQ+dZSStu8h8wQ==", "competitor_price"=>{"imageurl"=>"qwe", "price"=>"2", "source"=>"qwe", "title"=>"qweqw", "update_at"=>"qwe", "url"=>"qwe"}, "commit"=>"Create Competitor price"}
+No template found for CompetitorPricesController#create, rendering head :no_content
+Completed 204 No Content in 611ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-19 02:11:39 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (2.6ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 122ms (Views: 88.3ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:11:50 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jgyQYCOSoiij2KBhXGdeK6xgc50VG4zORxPaAepif0hhBEQp8Ep7r5dve3Q5SMRwvC8i647olMZQdljHYMgzPQ==", "competitor_price"=>{"imageurl"=>"qwewq", "price"=>"20", "source"=>"qweq", "title"=>"qweqwe", "update_at"=>"qweqw", "url"=>"qwe"}, "commit"=>"Create Competitor price"}
+No template found for CompetitorPricesController#create, rendering head :no_content
+Completed 204 No Content in 599ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:13:18 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (1.0ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 128ms (Views: 93.6ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-19 02:13:20 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (3.5ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 162ms (Views: 144.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-19 02:14:11 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/app/app/controllers/competitor_prices_controller.rb:37: syntax error, unexpected tIVAR, expecting '}'
+    @data = es_response['hits']['hits'...
+    ^~~~~):
+  
+app/controllers/competitor_prices_controller.rb:37: syntax error, unexpected tIVAR, expecting '}'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:14:14 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/app/app/controllers/competitor_prices_controller.rb:37: syntax error, unexpected tIVAR, expecting '}'
+    @data = es_response['hits']['hits'...
+    ^~~~~):
+  
+app/controllers/competitor_prices_controller.rb:37: syntax error, unexpected tIVAR, expecting '}'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:14:16 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/app/app/controllers/competitor_prices_controller.rb:37: syntax error, unexpected tIVAR, expecting '}'
+    @data = es_response['hits']['hits'...
+    ^~~~~):
+  
+app/controllers/competitor_prices_controller.rb:37: syntax error, unexpected tIVAR, expecting '}'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:15:30 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/app/app/controllers/competitor_prices_controller.rb:35: syntax error, unexpected tIDENTIFIER, expecting '}'
+    puts query
+    ^~~~):
+  
+app/controllers/competitor_prices_controller.rb:35: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:16:00 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/app/app/controllers/competitor_prices_controller.rb:35: syntax error, unexpected tIDENTIFIER, expecting '}'
+    puts query
+    ^~~~):
+  
+app/controllers/competitor_prices_controller.rb:35: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:16:01 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/app/app/controllers/competitor_prices_controller.rb:35: syntax error, unexpected tIDENTIFIER, expecting '}'
+    puts query
+    ^~~~):
+  
+app/controllers/competitor_prices_controller.rb:35: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:16:05 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/app/app/controllers/competitor_prices_controller.rb:35: syntax error, unexpected tIDENTIFIER, expecting '}'
+    puts query
+    ^~~~):
+  
+app/controllers/competitor_prices_controller.rb:35: syntax error, unexpected tIDENTIFIER, expecting '}'
+Started GET "/edit" for 172.21.0.1 at 2018-05-19 02:16:34 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/edit"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:16:37 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#index as HTML
+  Rendering competitor_prices/index.html.erb within layouts/application
+  [1m[36mCompetitorPrice Load (1.1ms)[0m  [1m[34mSELECT "competitor_prices".* FROM "competitor_prices"[0m
+  ↳ app/views/competitor_prices/index.html.erb:19
+  Rendered competitor_prices/index.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 121ms (Views: 93.6ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/competitor_prices/new" for 172.21.0.1 at 2018-05-19 02:16:59 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#new as HTML
+  Rendering competitor_prices/new.html.erb within layouts/application
+  Rendered competitor_prices/_form.html.erb (2.9ms)
+  Rendered competitor_prices/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 144ms (Views: 107.5ms | ActiveRecord: 10.8ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:17:38 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gUveHThLWhc5FW6GPyL1Qc6FlyeBWLBtYzmmgjctQSXNe3sqZTafJCfokEIv0yQlJyQ66UaUM6goK/wqgt0YXA==", "competitor_price"=>{"imageurl"=>"123", "price"=>"40", "source"=>"2", "title"=>"卜蜂經典佐義式嫩雞胸肉", "update_at"=>"2018-05-13", "url"=>"qwe"}, "commit"=>"Create Competitor price"}
+Completed 200 OK in 55ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/competitor_prices" for 172.21.0.1 at 2018-05-19 02:18:31 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CompetitorPricesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YWpRIUXBdww/hTznAqQ7s7SO6WJSC3rvG6lSqlLB3SqOYoVolhmuiwsy5/Jni6HopMG4FMn4YucMzNBs2GuRXw==", "competitor_price"=>{"imageurl"=>"123", "price"=>"40", "source"=>"2", "title"=>"雞胸肉", "update_at"=>"2018-05-13", "url"=>"qwe"}, "commit"=>"Create Competitor price"}
+Completed 200 OK in 44ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
