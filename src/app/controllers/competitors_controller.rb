@@ -89,11 +89,15 @@ class CompetitorsController < ApplicationController
     end
 
     def get_predict_catalog ( product_name )
-      #predict_url = URI.parse(URI.escape("http://192.168.100.2:30003/predict?title=#{product_name}"))
-      predict_url = URI.parse(URI.escape("http://#{ENV['FLASK_HOST']}:#{ENV['FLASK_PORT']}/predict?title=#{product_name}"))      
-      predict_res = Faraday.get predict_url
-      predict_catalog = predict_res.body
-      return predict_catalog
+      begin
+        #predict_url = URI.parse(URI.escape("http://192.168.100.2:30003/predict?title=#{product_name}"))
+        predict_url = URI.parse(URI.escape("http://#{ENV['FLASK_HOST']}:#{ENV['FLASK_PORT']}/predict?title=#{product_name}"))      
+        predict_res = Faraday.get predict_url
+        predict_catalog = predict_res.body
+        return predict_catalog
+      rescue Timeout::Error
+        retry if (retries += 1) < 3
+      end
     end
 
     def save_data_in_postgres ( predict_catalog )
