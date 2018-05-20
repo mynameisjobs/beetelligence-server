@@ -10,7 +10,7 @@ class CompetitorsController < ApplicationController
   # GET /competitors
   # GET /competitors.json
   def index
-    @competitors = Competitor.all
+    @competitors = Cogitmpetitor.all
   end
 
   # GET /competitors/1
@@ -31,47 +31,11 @@ class CompetitorsController < ApplicationController
   # POST /competitors
   # POST /competitors.json
   def create
-    #dev
-    #client = Elasticsearch::Client.new host: "http://192.168.100.6:9200"
-    #url = URI.parse(URI.escape("http://192.168.100.6:30003/predict?title=#{product_name}"))
-    #
-
-    client = Elasticsearch::Client.new host: "http://#{ENV['ES_HOST']}:9200"
     product_name = competitor_params[:title]
-    query =  { "_source": ["title", "price","store_id","product_id","store_name","imageurl","size","url","updated_at","status","currency"], "query":{"bool":{"filter":[{"term":{"status":"status_available"}}],"must":[{"match":{"title":product_name}}]}} }
-    es_response =client.search index: 'honestbee', body: query
-    products_array = []
-    @data = es_response['hits']['hits'].map { |r| r['_source']}
-    # @data.each do |item|
-    #   api_url = "https://www.honestbee.tw/api/api/next_available_timeslot?storeId=#{item['store_id']}&latitude=#{competitor_params[:latitude]}&longitude=#{competitor_params[:longitude]}"
-    #   api_res = Faraday.get api_url
-    #   api_resstr = api_res.body
-    #   item.merge!(JSON.parse(api_resstr)['timeslot'])
-    #   products_array.push(item)
-    # end
-    #GetProductCatalog
-    predict_url = URI.parse(URI.escape("http://#{ENV['FLASK_HOST']}:#{ENV['FLASK_PORT']}/predict?title=#{product_name}"))
-  
-    predict_res = Faraday.get predict_url
-    predict_catalog = predict_res.body
-
-    @competitor = Competitor.new(competitor_params.merge(:catalog => predict_catalog))
-    if @competitor.save
-      #render :json => products_array
-      render :json => @data
-    else
-      render :json => { status => "404 Please contact admin." }
-    end
-    
-    #respond_to do |format|
-    #  if @competitor.save
-    #    format.html { redirect_to @competitor, notice: 'Competitor was successfully created.' }
-    #    format.json { render :show, status: :created, location: @competitor }
-    #  else
-    #    format.html { render :new }
-    #    format.json { render json: @competitor.errors, status: :unprocessable_entity }
-    #  end
-    #end
+    honestbee_datas = get_honestbee_data (product_name)
+    predict_catalog = get_predict_catalog ( product_name )
+    save_data_in_postgres (predict_catalog)
+    render :json => honestbee_datas
   end
 
   # PATCH/PUT /competitors/1
@@ -108,4 +72,34 @@ class CompetitorsController < ApplicationController
     def competitor_params
       params.require(:competitor).permit(:imageurl, :latitude, :longitude, :price, :source, :title, :update_at, :url, :user_id)
     end
+
+
+    def get_honestbee_data ( product_name )
+      #client = Elasticsearch::Client.new host: "http://192.168.100.2:9200"
+      client = Elasticsearch::Client.new host: "http://#{ENV['ES_HOST']}:9200"
+      query =  { "_source": ["title", "price","store_id","product_id","store_name","imageurl","size","url","updated_at","status","currency"], "query":{"bool":{"filter":[{"term":{"status":"status_available"}}],"must":[{"match":{"title":product_name}}]}} }
+      es_response =client.search index: 'honestbee', body: query
+      data_list = es_response['hits']['hits'].map { |r| r['_source']}
+      return data_list
+    end
+
+    def get_predict_catalog ( product_name )
+      #predict_url = URI.parse(URI.escape("http://192.168.100.2:30003/predict?title=#{product_name}"))
+      predict_url = URI.parse(URI.escape("http://#{ENV['FLASK_HOST']}:#{ENV['FLASK_PORT']}/predict?title=#{product_name}"))      
+      predict_res = Faraday.get predict_url
+      predict_catalog = predict_res.body
+      return predict_catalog
+    end
+
+    def save_data_in_postgres ( predict_catalog )
+      @competitor = Competitor.new(competitor_params.merge(:catalog => predict_catalog))
+      if @competitor.save
+          return "save success."
+      else
+          #send email
+          return "save failed"
+      end
+    end
+
+
 end
