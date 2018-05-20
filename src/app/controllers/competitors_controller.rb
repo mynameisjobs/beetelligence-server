@@ -77,9 +77,136 @@ class CompetitorsController < ApplicationController
     def get_honestbee_data ( product_name )
       begin
         retries ||= 0
+        keyword_dict = ['雞肉',
+                        '豬肉',
+                        '水產',
+                        '蔬菜',
+                        '水果',
+                        '生鮮魚肉',
+                        '蔬菜水果',
+                        '鮭魚',
+                        '鯖魚',
+                        '土魠',
+                        '海鱺',
+                        '虱目',
+                        '白帶魚',
+                        '鱈魚',
+                        '大比目',
+                        '肉魚',
+                        '安康',
+                        '干貝',
+                        '龍蝦',
+                        '其他水產',
+                        '安格斯牛',
+                        '和牛',
+                        '精選牛排',
+                        '骰子牛',
+                        '肋條',
+                        '肋塊',
+                        '火鍋',
+                        '燒烤片',
+                        '伊比利豬',
+                        '松阪豬',
+                        '雞腿',
+                        '骨腿',
+                        '雞胸肉',
+                        '漢堡',
+                        '肉排',
+                        '香腸',
+                        '其他肉品',
+                        '櫻桃',
+                        '文旦',
+                        '柚子',
+                        '奇異果',
+                        '芒果',
+                        '愛文',
+                        '水蜜桃',
+                        '甜桃',
+                        '火龍果',
+                        '水梨',
+                        '西洋梨',
+                        '哈密瓜',
+                        '西瓜',
+                        '柑橘',
+                        '柳丁',
+                        '榴槤',
+                        '山竹',
+                        '紅毛丹',
+                        '蘋果',
+                        '番茄',
+                        '檸檬',
+                        '金桔',
+                        '芭樂',
+                        '石榴',
+                        '玉荷包',
+                        '荔枝',
+                        '鳳梨',
+                        '蓮霧',
+                        '楊桃',
+                        '木瓜',
+                        '地瓜',
+                        '芋頭',
+                        '玉米',
+                        '海菜',
+                        '蔥',
+                        '薑',
+                        '蒜',
+                        '黑木耳',
+                        '菇類',
+                        '南瓜',
+                        '馬鈴薯']
+
+        should_keyword = false
+        keyword_dict.each do |keyword|
+          if product_name.include? keyword
+            should_keyword = keyword
+            break
+          end
+        end
+        client = Elasticsearch::Client.new host: "http://#{ENV['ES_HOST']}:9200"
+        query = {
+          "_source": [
+            "title",
+            "price",
+            "store_id",
+            "product_id",
+            "store_name",
+            "imageurl",
+            "size",
+            "url",
+            "updated_at",
+            "status",
+            "currency"
+          ],
+          "query": {
+            "bool": {
+              "filter": [
+                {
+                  "term": {
+                    "status": "status_available"
+                  }
+                }
+              ],
+              "should": [
+                {
+                  "match": {
+                    "title": should_keyword
+                  }
+                }
+              ],
+              "must": [
+                {
+                  "match": {
+                    "title": product_name
+                  }
+                }
+              ]
+            }
+          }
+        }
         #client = Elasticsearch::Client.new host: "http://192.168.100.2:9200"
         client = Elasticsearch::Client.new host: "http://#{ENV['ES_HOST']}:9200"
-        query =  { "_source": ["title", "price","store_id","product_id","store_name","imageurl","size","url","updated_at","status","currency"], "query":{"bool":{"filter":[{"term":{"status":"status_available"}}],"must":[{"match":{"title":product_name}}]}} }
+        #query =  { "_source": ["title", "price","store_id","product_id","store_name","imageurl","size","url","updated_at","status","currency"], "query":{"bool":{"filter":[{"term":{"status":"status_available"}}],"must":[{"match":{"title":product_name}}]}} }
         es_response =client.search index: 'honestbee', body: query
         data_list = es_response['hits']['hits'].map { |r| r['_source']}
         return data_list
