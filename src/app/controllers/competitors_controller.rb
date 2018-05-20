@@ -10,7 +10,7 @@ class CompetitorsController < ApplicationController
   # GET /competitors
   # GET /competitors.json
   def index
-    @competitors = Cogitmpetitor.all
+    @competitors = Competitor.all
   end
 
   # GET /competitors/1
@@ -75,12 +75,17 @@ class CompetitorsController < ApplicationController
 
 
     def get_honestbee_data ( product_name )
-      #client = Elasticsearch::Client.new host: "http://192.168.100.2:9200"
-      client = Elasticsearch::Client.new host: "http://#{ENV['ES_HOST']}:9200"
-      query =  { "_source": ["title", "price","store_id","product_id","store_name","imageurl","size","url","updated_at","status","currency"], "query":{"bool":{"filter":[{"term":{"status":"status_available"}}],"must":[{"match":{"title":product_name}}]}} }
-      es_response =client.search index: 'honestbee', body: query
-      data_list = es_response['hits']['hits'].map { |r| r['_source']}
-      return data_list
+      begin
+        retries ||= 0
+        #client = Elasticsearch::Client.new host: "http://192.168.100.2:9200"
+        client = Elasticsearch::Client.new host: "http://#{ENV['ES_HOST']}:9200"
+        query =  { "_source": ["title", "price","store_id","product_id","store_name","imageurl","size","url","updated_at","status","currency"], "query":{"bool":{"filter":[{"term":{"status":"status_available"}}],"must":[{"match":{"title":product_name}}]}} }
+        es_response =client.search index: 'honestbee', body: query
+        data_list = es_response['hits']['hits'].map { |r| r['_source']}
+        return data_list
+      rescue Timeout::Error
+        retry if (retries += 1) < 3
+      end
     end
 
     def get_predict_catalog ( product_name )
